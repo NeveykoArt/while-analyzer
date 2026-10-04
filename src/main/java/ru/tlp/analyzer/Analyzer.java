@@ -15,13 +15,25 @@ public class Analyzer {
 
             return new AnalysisResult(
                     true,
-                    "Синтаксис корректен"
+                    "Синтаксис корректен",
+                    -1,
+                    0
             );
 
-        } catch (ParserException | IllegalArgumentException exception) {
+        } catch (ParserException exception) {
             return new AnalysisResult(
                     false,
-                    exception.getMessage()
+                    exception.getMessage(),
+                    exception.getPosition(),
+                    exception.getLength()
+            );
+
+        } catch (IllegalArgumentException exception) {
+            return new AnalysisResult(
+                    false,
+                    exception.getMessage(),
+                    -1,
+                    0
             );
         }
     }

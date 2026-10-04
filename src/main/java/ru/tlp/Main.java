@@ -451,7 +451,9 @@ public class Main extends Application {
 
         codeArea.setStyle(
                 "-fx-font-family: 'Consolas';"
-                        + "-fx-font-size: 15px;"
+                + "-fx-font-size: 15px;"
+                + "-fx-highlight-fill: #e74c3c;"
+                + "-fx-highlight-text-fill: white;"
         );
 
         lineNumbers = new TextArea("1");
@@ -552,13 +554,33 @@ public class Main extends Application {
 
     private void analyze() {
         AnalysisResult result =
-                analyzer.analyze(
-                        codeArea.getText()
-                );
+                analyzer.analyze(codeArea.getText());
 
-        outputArea.setText(
-                result.message()
+        outputArea.setText(result.message());
+
+        if (result.success()) {
+                codeArea.deselect();
+                return;
+        }
+
+        int start = result.errorPosition();
+
+        if (start < 0) {
+                return;
+        }
+
+        if (start >= codeArea.getLength()) {
+                codeArea.positionCaret(codeArea.getLength());
+                return;
+        }
+
+        int end = Math.min(
+                start + result.errorLength(),
+                codeArea.getLength()
         );
+
+        codeArea.requestFocus();
+        codeArea.selectRange(start, end);
     }
 
     private void newFile() {

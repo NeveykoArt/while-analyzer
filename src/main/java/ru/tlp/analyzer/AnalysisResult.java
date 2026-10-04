@@ -2,6 +2,8 @@ package ru.tlp.analyzer;
 
 public record AnalysisResult(
         boolean success,
-        String message
+        String message,
+        int errorPosition,
+        int errorLength
 ) {
 }

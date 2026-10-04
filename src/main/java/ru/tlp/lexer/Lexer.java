@@ -135,7 +135,7 @@ public class Lexer {
             }
         }
 
-        tokens.add(new Token(TokenType.EOF, ""));
+        tokens.add(new Token(TokenType.EOF, "", position));
         return tokens;
     }
 
@@ -163,7 +163,7 @@ public class Lexer {
             default -> TokenType.IDENTIFIER;
         };
 
-        return new Token(type, value);
+        return new Token(type, value, start);
     }
 
     private Token readNumber() {
@@ -176,7 +176,8 @@ public class Lexer {
 
         return new Token(
                 TokenType.NUMBER,
-                input.substring(start, position)
+                input.substring(start, position),
+                start
         );
     }
 
@@ -186,12 +187,12 @@ public class Lexer {
     }
 
     private void addToken(
-            List<Token> tokens,
-            TokenType type,
-            String value,
-            int length
+        List<Token> tokens,
+        TokenType type,
+        String value,
+        int length
     ) {
-        tokens.add(new Token(type, value));
+        tokens.add(new Token(type, value, position));
         position += length;
     }
 

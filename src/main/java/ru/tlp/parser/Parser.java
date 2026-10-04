@@ -279,7 +279,9 @@ public class Parser {
                         + ". Получено: "
                         + token
                         + ", индекс токена: "
-                        + position
+                        + position,
+                token.getPosition(),
+                Math.max(token.getValue().length(), 1)
         );
     }
 }
