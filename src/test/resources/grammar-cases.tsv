@@ -1,0 +1,658 @@
+# Название	Допустим	Код
+V1 — условие и тело	true	while (x) {}
+V2 — условие и тело	true	while (x) { x++; }
+V3 — условие и тело	true	while (x) x++;
+V4 — условие и тело	true	while (x) ++x;
+V5 — условие и тело	true	while (x) --x;
+V6 — условие и тело	true	while (x) x--;
+V7 — условие и тело	true	while (x) break;
+V8 — условие и тело	true	while (x) continue;
+V9 — условие и тело	true	while (x) x = 1;
+V10 — условие и тело	true	while (x) x += 1;
+V11 — условие и тело	true	while (x) x -= 1;
+V12 — условие и тело	true	while (x) x *= 2;
+V13 — условие и тело	true	while (x) x /= 0;
+V14 — условие и тело	true	while (x) x %= 2;
+V15 — условие и тело	true	while (x) x + y * 2;
+V16 — условие и тело	true	while (x) true;
+V17 — условие и тело	true	while (x) 1;
+V18 — условие и тело	true	while (x) { break; continue; }
+V19 — условие и тело	true	while (x) while (y) break;
+V20 — условие и тело	true	while (x) { while (y) { y--; } x++; }
+V21 — условие и тело	true	while (0) {}
+V22 — условие и тело	true	while (0) { x++; }
+V23 — условие и тело	true	while (0) x++;
+V24 — условие и тело	true	while (0) ++x;
+V25 — условие и тело	true	while (0) --x;
+V26 — условие и тело	true	while (0) x--;
+V27 — условие и тело	true	while (0) break;
+V28 — условие и тело	true	while (0) continue;
+V29 — условие и тело	true	while (0) x = 1;
+V30 — условие и тело	true	while (0) x += 1;
+V31 — условие и тело	true	while (0) x -= 1;
+V32 — условие и тело	true	while (0) x *= 2;
+V33 — условие и тело	true	while (0) x /= 0;
+V34 — условие и тело	true	while (0) x %= 2;
+V35 — условие и тело	true	while (0) x + y * 2;
+V36 — условие и тело	true	while (0) true;
+V37 — условие и тело	true	while (0) 1;
+V38 — условие и тело	true	while (0) { break; continue; }
+V39 — условие и тело	true	while (0) while (y) break;
+V40 — условие и тело	true	while (0) { while (y) { y--; } x++; }
+V41 — условие и тело	true	while (1) {}
+V42 — условие и тело	true	while (1) { x++; }
+V43 — условие и тело	true	while (1) x++;
+V44 — условие и тело	true	while (1) ++x;
+V45 — условие и тело	true	while (1) --x;
+V46 — условие и тело	true	while (1) x--;
+V47 — условие и тело	true	while (1) break;
+V48 — условие и тело	true	while (1) continue;
+V49 — условие и тело	true	while (1) x = 1;
+V50 — условие и тело	true	while (1) x += 1;
+V51 — условие и тело	true	while (1) x -= 1;
+V52 — условие и тело	true	while (1) x *= 2;
+V53 — условие и тело	true	while (1) x /= 0;
+V54 — условие и тело	true	while (1) x %= 2;
+V55 — условие и тело	true	while (1) x + y * 2;
+V56 — условие и тело	true	while (1) true;
+V57 — условие и тело	true	while (1) 1;
+V58 — условие и тело	true	while (1) { break; continue; }
+V59 — условие и тело	true	while (1) while (y) break;
+V60 — условие и тело	true	while (1) { while (y) { y--; } x++; }
+V61 — условие и тело	true	while (true) {}
+V62 — условие и тело	true	while (true) { x++; }
+V63 — условие и тело	true	while (true) x++;
+V64 — условие и тело	true	while (true) ++x;
+V65 — условие и тело	true	while (true) --x;
+V66 — условие и тело	true	while (true) x--;
+V67 — условие и тело	true	while (true) break;
+V68 — условие и тело	true	while (true) continue;
+V69 — условие и тело	true	while (true) x = 1;
+V70 — условие и тело	true	while (true) x += 1;
+V71 — условие и тело	true	while (true) x -= 1;
+V72 — условие и тело	true	while (true) x *= 2;
+V73 — условие и тело	true	while (true) x /= 0;
+V74 — условие и тело	true	while (true) x %= 2;
+V75 — условие и тело	true	while (true) x + y * 2;
+V76 — условие и тело	true	while (true) true;
+V77 — условие и тело	true	while (true) 1;
+V78 — условие и тело	true	while (true) { break; continue; }
+V79 — условие и тело	true	while (true) while (y) break;
+V80 — условие и тело	true	while (true) { while (y) { y--; } x++; }
+V81 — условие и тело	true	while (false) {}
+V82 — условие и тело	true	while (false) { x++; }
+V83 — условие и тело	true	while (false) x++;
+V84 — условие и тело	true	while (false) ++x;
+V85 — условие и тело	true	while (false) --x;
+V86 — условие и тело	true	while (false) x--;
+V87 — условие и тело	true	while (false) break;
+V88 — условие и тело	true	while (false) continue;
+V89 — условие и тело	true	while (false) x = 1;
+V90 — условие и тело	true	while (false) x += 1;
+V91 — условие и тело	true	while (false) x -= 1;
+V92 — условие и тело	true	while (false) x *= 2;
+V93 — условие и тело	true	while (false) x /= 0;
+V94 — условие и тело	true	while (false) x %= 2;
+V95 — условие и тело	true	while (false) x + y * 2;
+V96 — условие и тело	true	while (false) true;
+V97 — условие и тело	true	while (false) 1;
+V98 — условие и тело	true	while (false) { break; continue; }
+V99 — условие и тело	true	while (false) while (y) break;
+V100 — условие и тело	true	while (false) { while (y) { y--; } x++; }
+V101 — условие и тело	true	while (!x) {}
+V102 — условие и тело	true	while (!x) { x++; }
+V103 — условие и тело	true	while (!x) x++;
+V104 — условие и тело	true	while (!x) ++x;
+V105 — условие и тело	true	while (!x) --x;
+V106 — условие и тело	true	while (!x) x--;
+V107 — условие и тело	true	while (!x) break;
+V108 — условие и тело	true	while (!x) continue;
+V109 — условие и тело	true	while (!x) x = 1;
+V110 — условие и тело	true	while (!x) x += 1;
+V111 — условие и тело	true	while (!x) x -= 1;
+V112 — условие и тело	true	while (!x) x *= 2;
+V113 — условие и тело	true	while (!x) x /= 0;
+V114 — условие и тело	true	while (!x) x %= 2;
+V115 — условие и тело	true	while (!x) x + y * 2;
+V116 — условие и тело	true	while (!x) true;
+V117 — условие и тело	true	while (!x) 1;
+V118 — условие и тело	true	while (!x) { break; continue; }
+V119 — условие и тело	true	while (!x) while (y) break;
+V120 — условие и тело	true	while (!x) { while (y) { y--; } x++; }
+V121 — условие и тело	true	while (!true) {}
+V122 — условие и тело	true	while (!true) { x++; }
+V123 — условие и тело	true	while (!true) x++;
+V124 — условие и тело	true	while (!true) ++x;
+V125 — условие и тело	true	while (!true) --x;
+V126 — условие и тело	true	while (!true) x--;
+V127 — условие и тело	true	while (!true) break;
+V128 — условие и тело	true	while (!true) continue;
+V129 — условие и тело	true	while (!true) x = 1;
+V130 — условие и тело	true	while (!true) x += 1;
+V131 — условие и тело	true	while (!true) x -= 1;
+V132 — условие и тело	true	while (!true) x *= 2;
+V133 — условие и тело	true	while (!true) x /= 0;
+V134 — условие и тело	true	while (!true) x %= 2;
+V135 — условие и тело	true	while (!true) x + y * 2;
+V136 — условие и тело	true	while (!true) true;
+V137 — условие и тело	true	while (!true) 1;
+V138 — условие и тело	true	while (!true) { break; continue; }
+V139 — условие и тело	true	while (!true) while (y) break;
+V140 — условие и тело	true	while (!true) { while (y) { y--; } x++; }
+V141 — условие и тело	true	while ((x)) {}
+V142 — условие и тело	true	while ((x)) { x++; }
+V143 — условие и тело	true	while ((x)) x++;
+V144 — условие и тело	true	while ((x)) ++x;
+V145 — условие и тело	true	while ((x)) --x;
+V146 — условие и тело	true	while ((x)) x--;
+V147 — условие и тело	true	while ((x)) break;
+V148 — условие и тело	true	while ((x)) continue;
+V149 — условие и тело	true	while ((x)) x = 1;
+V150 — условие и тело	true	while ((x)) x += 1;
+V151 — условие и тело	true	while ((x)) x -= 1;
+V152 — условие и тело	true	while ((x)) x *= 2;
+V153 — условие и тело	true	while ((x)) x /= 0;
+V154 — условие и тело	true	while ((x)) x %= 2;
+V155 — условие и тело	true	while ((x)) x + y * 2;
+V156 — условие и тело	true	while ((x)) true;
+V157 — условие и тело	true	while ((x)) 1;
+V158 — условие и тело	true	while ((x)) { break; continue; }
+V159 — условие и тело	true	while ((x)) while (y) break;
+V160 — условие и тело	true	while ((x)) { while (y) { y--; } x++; }
+V161 — условие и тело	true	while (((x))) {}
+V162 — условие и тело	true	while (((x))) { x++; }
+V163 — условие и тело	true	while (((x))) x++;
+V164 — условие и тело	true	while (((x))) ++x;
+V165 — условие и тело	true	while (((x))) --x;
+V166 — условие и тело	true	while (((x))) x--;
+V167 — условие и тело	true	while (((x))) break;
+V168 — условие и тело	true	while (((x))) continue;
+V169 — условие и тело	true	while (((x))) x = 1;
+V170 — условие и тело	true	while (((x))) x += 1;
+V171 — условие и тело	true	while (((x))) x -= 1;
+V172 — условие и тело	true	while (((x))) x *= 2;
+V173 — условие и тело	true	while (((x))) x /= 0;
+V174 — условие и тело	true	while (((x))) x %= 2;
+V175 — условие и тело	true	while (((x))) x + y * 2;
+V176 — условие и тело	true	while (((x))) true;
+V177 — условие и тело	true	while (((x))) 1;
+V178 — условие и тело	true	while (((x))) { break; continue; }
+V179 — условие и тело	true	while (((x))) while (y) break;
+V180 — условие и тело	true	while (((x))) { while (y) { y--; } x++; }
+V181 — условие и тело	true	while ((x < 2)) {}
+V182 — условие и тело	true	while ((x < 2)) { x++; }
+V183 — условие и тело	true	while ((x < 2)) x++;
+V184 — условие и тело	true	while ((x < 2)) ++x;
+V185 — условие и тело	true	while ((x < 2)) --x;
+V186 — условие и тело	true	while ((x < 2)) x--;
+V187 — условие и тело	true	while ((x < 2)) break;
+V188 — условие и тело	true	while ((x < 2)) continue;
+V189 — условие и тело	true	while ((x < 2)) x = 1;
+V190 — условие и тело	true	while ((x < 2)) x += 1;
+V191 — условие и тело	true	while ((x < 2)) x -= 1;
+V192 — условие и тело	true	while ((x < 2)) x *= 2;
+V193 — условие и тело	true	while ((x < 2)) x /= 0;
+V194 — условие и тело	true	while ((x < 2)) x %= 2;
+V195 — условие и тело	true	while ((x < 2)) x + y * 2;
+V196 — условие и тело	true	while ((x < 2)) true;
+V197 — условие и тело	true	while ((x < 2)) 1;
+V198 — условие и тело	true	while ((x < 2)) { break; continue; }
+V199 — условие и тело	true	while ((x < 2)) while (y) break;
+V200 — условие и тело	true	while ((x < 2)) { while (y) { y--; } x++; }
+V201 — условие и тело	true	while (x + 2 * y) {}
+V202 — условие и тело	true	while (x + 2 * y) { x++; }
+V203 — условие и тело	true	while (x + 2 * y) x++;
+V204 — условие и тело	true	while (x + 2 * y) ++x;
+V205 — условие и тело	true	while (x + 2 * y) --x;
+V206 — условие и тело	true	while (x + 2 * y) x--;
+V207 — условие и тело	true	while (x + 2 * y) break;
+V208 — условие и тело	true	while (x + 2 * y) continue;
+V209 — условие и тело	true	while (x + 2 * y) x = 1;
+V210 — условие и тело	true	while (x + 2 * y) x += 1;
+V211 — условие и тело	true	while (x + 2 * y) x -= 1;
+V212 — условие и тело	true	while (x + 2 * y) x *= 2;
+V213 — условие и тело	true	while (x + 2 * y) x /= 0;
+V214 — условие и тело	true	while (x + 2 * y) x %= 2;
+V215 — условие и тело	true	while (x + 2 * y) x + y * 2;
+V216 — условие и тело	true	while (x + 2 * y) true;
+V217 — условие и тело	true	while (x + 2 * y) 1;
+V218 — условие и тело	true	while (x + 2 * y) { break; continue; }
+V219 — условие и тело	true	while (x + 2 * y) while (y) break;
+V220 — условие и тело	true	while (x + 2 * y) { while (y) { y--; } x++; }
+V221 — условие и тело	true	while (x < 2) {}
+V222 — условие и тело	true	while (x < 2) { x++; }
+V223 — условие и тело	true	while (x < 2) x++;
+V224 — условие и тело	true	while (x < 2) ++x;
+V225 — условие и тело	true	while (x < 2) --x;
+V226 — условие и тело	true	while (x < 2) x--;
+V227 — условие и тело	true	while (x < 2) break;
+V228 — условие и тело	true	while (x < 2) continue;
+V229 — условие и тело	true	while (x < 2) x = 1;
+V230 — условие и тело	true	while (x < 2) x += 1;
+V231 — условие и тело	true	while (x < 2) x -= 1;
+V232 — условие и тело	true	while (x < 2) x *= 2;
+V233 — условие и тело	true	while (x < 2) x /= 0;
+V234 — условие и тело	true	while (x < 2) x %= 2;
+V235 — условие и тело	true	while (x < 2) x + y * 2;
+V236 — условие и тело	true	while (x < 2) true;
+V237 — условие и тело	true	while (x < 2) 1;
+V238 — условие и тело	true	while (x < 2) { break; continue; }
+V239 — условие и тело	true	while (x < 2) while (y) break;
+V240 — условие и тело	true	while (x < 2) { while (y) { y--; } x++; }
+V241 — условие и тело	true	while (x != y) {}
+V242 — условие и тело	true	while (x != y) { x++; }
+V243 — условие и тело	true	while (x != y) x++;
+V244 — условие и тело	true	while (x != y) ++x;
+V245 — условие и тело	true	while (x != y) --x;
+V246 — условие и тело	true	while (x != y) x--;
+V247 — условие и тело	true	while (x != y) break;
+V248 — условие и тело	true	while (x != y) continue;
+V249 — условие и тело	true	while (x != y) x = 1;
+V250 — условие и тело	true	while (x != y) x += 1;
+V251 — условие и тело	true	while (x != y) x -= 1;
+V252 — условие и тело	true	while (x != y) x *= 2;
+V253 — условие и тело	true	while (x != y) x /= 0;
+V254 — условие и тело	true	while (x != y) x %= 2;
+V255 — условие и тело	true	while (x != y) x + y * 2;
+V256 — условие и тело	true	while (x != y) true;
+V257 — условие и тело	true	while (x != y) 1;
+V258 — условие и тело	true	while (x != y) { break; continue; }
+V259 — условие и тело	true	while (x != y) while (y) break;
+V260 — условие и тело	true	while (x != y) { while (y) { y--; } x++; }
+V261 — условие и тело	true	while (x && y) {}
+V262 — условие и тело	true	while (x && y) { x++; }
+V263 — условие и тело	true	while (x && y) x++;
+V264 — условие и тело	true	while (x && y) ++x;
+V265 — условие и тело	true	while (x && y) --x;
+V266 — условие и тело	true	while (x && y) x--;
+V267 — условие и тело	true	while (x && y) break;
+V268 — условие и тело	true	while (x && y) continue;
+V269 — условие и тело	true	while (x && y) x = 1;
+V270 — условие и тело	true	while (x && y) x += 1;
+V271 — условие и тело	true	while (x && y) x -= 1;
+V272 — условие и тело	true	while (x && y) x *= 2;
+V273 — условие и тело	true	while (x && y) x /= 0;
+V274 — условие и тело	true	while (x && y) x %= 2;
+V275 — условие и тело	true	while (x && y) x + y * 2;
+V276 — условие и тело	true	while (x && y) true;
+V277 — условие и тело	true	while (x && y) 1;
+V278 — условие и тело	true	while (x && y) { break; continue; }
+V279 — условие и тело	true	while (x && y) while (y) break;
+V280 — условие и тело	true	while (x && y) { while (y) { y--; } x++; }
+V281 — условие и тело	true	while (x || y) {}
+V282 — условие и тело	true	while (x || y) { x++; }
+V283 — условие и тело	true	while (x || y) x++;
+V284 — условие и тело	true	while (x || y) ++x;
+V285 — условие и тело	true	while (x || y) --x;
+V286 — условие и тело	true	while (x || y) x--;
+V287 — условие и тело	true	while (x || y) break;
+V288 — условие и тело	true	while (x || y) continue;
+V289 — условие и тело	true	while (x || y) x = 1;
+V290 — условие и тело	true	while (x || y) x += 1;
+V291 — условие и тело	true	while (x || y) x -= 1;
+V292 — условие и тело	true	while (x || y) x *= 2;
+V293 — условие и тело	true	while (x || y) x /= 0;
+V294 — условие и тело	true	while (x || y) x %= 2;
+V295 — условие и тело	true	while (x || y) x + y * 2;
+V296 — условие и тело	true	while (x || y) true;
+V297 — условие и тело	true	while (x || y) 1;
+V298 — условие и тело	true	while (x || y) { break; continue; }
+V299 — условие и тело	true	while (x || y) while (y) break;
+V300 — условие и тело	true	while (x || y) { while (y) { y--; } x++; }
+V301 — условие и тело	true	while (x || y && z) {}
+V302 — условие и тело	true	while (x || y && z) { x++; }
+V303 — условие и тело	true	while (x || y && z) x++;
+V304 — условие и тело	true	while (x || y && z) ++x;
+V305 — условие и тело	true	while (x || y && z) --x;
+V306 — условие и тело	true	while (x || y && z) x--;
+V307 — условие и тело	true	while (x || y && z) break;
+V308 — условие и тело	true	while (x || y && z) continue;
+V309 — условие и тело	true	while (x || y && z) x = 1;
+V310 — условие и тело	true	while (x || y && z) x += 1;
+V311 — условие и тело	true	while (x || y && z) x -= 1;
+V312 — условие и тело	true	while (x || y && z) x *= 2;
+V313 — условие и тело	true	while (x || y && z) x /= 0;
+V314 — условие и тело	true	while (x || y && z) x %= 2;
+V315 — условие и тело	true	while (x || y && z) x + y * 2;
+V316 — условие и тело	true	while (x || y && z) true;
+V317 — условие и тело	true	while (x || y && z) 1;
+V318 — условие и тело	true	while (x || y && z) { break; continue; }
+V319 — условие и тело	true	while (x || y && z) while (y) break;
+V320 — условие и тело	true	while (x || y && z) { while (y) { y--; } x++; }
+V321 — условие и тело	true	while ((x || y) && z) {}
+V322 — условие и тело	true	while ((x || y) && z) { x++; }
+V323 — условие и тело	true	while ((x || y) && z) x++;
+V324 — условие и тело	true	while ((x || y) && z) ++x;
+V325 — условие и тело	true	while ((x || y) && z) --x;
+V326 — условие и тело	true	while ((x || y) && z) x--;
+V327 — условие и тело	true	while ((x || y) && z) break;
+V328 — условие и тело	true	while ((x || y) && z) continue;
+V329 — условие и тело	true	while ((x || y) && z) x = 1;
+V330 — условие и тело	true	while ((x || y) && z) x += 1;
+V331 — условие и тело	true	while ((x || y) && z) x -= 1;
+V332 — условие и тело	true	while ((x || y) && z) x *= 2;
+V333 — условие и тело	true	while ((x || y) && z) x /= 0;
+V334 — условие и тело	true	while ((x || y) && z) x %= 2;
+V335 — условие и тело	true	while ((x || y) && z) x + y * 2;
+V336 — условие и тело	true	while ((x || y) && z) true;
+V337 — условие и тело	true	while ((x || y) && z) 1;
+V338 — условие и тело	true	while ((x || y) && z) { break; continue; }
+V339 — условие и тело	true	while ((x || y) && z) while (y) break;
+V340 — условие и тело	true	while ((x || y) && z) { while (y) { y--; } x++; }
+V341 — условие и тело	true	while (!x == y) {}
+V342 — условие и тело	true	while (!x == y) { x++; }
+V343 — условие и тело	true	while (!x == y) x++;
+V344 — условие и тело	true	while (!x == y) ++x;
+V345 — условие и тело	true	while (!x == y) --x;
+V346 — условие и тело	true	while (!x == y) x--;
+V347 — условие и тело	true	while (!x == y) break;
+V348 — условие и тело	true	while (!x == y) continue;
+V349 — условие и тело	true	while (!x == y) x = 1;
+V350 — условие и тело	true	while (!x == y) x += 1;
+V351 — условие и тело	true	while (!x == y) x -= 1;
+V352 — условие и тело	true	while (!x == y) x *= 2;
+V353 — условие и тело	true	while (!x == y) x /= 0;
+V354 — условие и тело	true	while (!x == y) x %= 2;
+V355 — условие и тело	true	while (!x == y) x + y * 2;
+V356 — условие и тело	true	while (!x == y) true;
+V357 — условие и тело	true	while (!x == y) 1;
+V358 — условие и тело	true	while (!x == y) { break; continue; }
+V359 — условие и тело	true	while (!x == y) while (y) break;
+V360 — условие и тело	true	while (!x == y) { while (y) { y--; } x++; }
+V361 — условие и тело	true	while (!(x < y)) {}
+V362 — условие и тело	true	while (!(x < y)) { x++; }
+V363 — условие и тело	true	while (!(x < y)) x++;
+V364 — условие и тело	true	while (!(x < y)) ++x;
+V365 — условие и тело	true	while (!(x < y)) --x;
+V366 — условие и тело	true	while (!(x < y)) x--;
+V367 — условие и тело	true	while (!(x < y)) break;
+V368 — условие и тело	true	while (!(x < y)) continue;
+V369 — условие и тело	true	while (!(x < y)) x = 1;
+V370 — условие и тело	true	while (!(x < y)) x += 1;
+V371 — условие и тело	true	while (!(x < y)) x -= 1;
+V372 — условие и тело	true	while (!(x < y)) x *= 2;
+V373 — условие и тело	true	while (!(x < y)) x /= 0;
+V374 — условие и тело	true	while (!(x < y)) x %= 2;
+V375 — условие и тело	true	while (!(x < y)) x + y * 2;
+V376 — условие и тело	true	while (!(x < y)) true;
+V377 — условие и тело	true	while (!(x < y)) 1;
+V378 — условие и тело	true	while (!(x < y)) { break; continue; }
+V379 — условие и тело	true	while (!(x < y)) while (y) break;
+V380 — условие и тело	true	while (!(x < y)) { while (y) { y--; } x++; }
+V381 — условие и тело	true	while (x / 0) {}
+V382 — условие и тело	true	while (x / 0) { x++; }
+V383 — условие и тело	true	while (x / 0) x++;
+V384 — условие и тело	true	while (x / 0) ++x;
+V385 — условие и тело	true	while (x / 0) --x;
+V386 — условие и тело	true	while (x / 0) x--;
+V387 — условие и тело	true	while (x / 0) break;
+V388 — условие и тело	true	while (x / 0) continue;
+V389 — условие и тело	true	while (x / 0) x = 1;
+V390 — условие и тело	true	while (x / 0) x += 1;
+V391 — условие и тело	true	while (x / 0) x -= 1;
+V392 — условие и тело	true	while (x / 0) x *= 2;
+V393 — условие и тело	true	while (x / 0) x /= 0;
+V394 — условие и тело	true	while (x / 0) x %= 2;
+V395 — условие и тело	true	while (x / 0) x + y * 2;
+V396 — условие и тело	true	while (x / 0) true;
+V397 — условие и тело	true	while (x / 0) 1;
+V398 — условие и тело	true	while (x / 0) { break; continue; }
+V399 — условие и тело	true	while (x / 0) while (y) break;
+V400 — условие и тело	true	while (x / 0) { while (y) { y--; } x++; }
+V401 — условие и тело	true	while (999999999999999999999999) {}
+V402 — условие и тело	true	while (999999999999999999999999) { x++; }
+V403 — условие и тело	true	while (999999999999999999999999) x++;
+V404 — условие и тело	true	while (999999999999999999999999) ++x;
+V405 — условие и тело	true	while (999999999999999999999999) --x;
+V406 — условие и тело	true	while (999999999999999999999999) x--;
+V407 — условие и тело	true	while (999999999999999999999999) break;
+V408 — условие и тело	true	while (999999999999999999999999) continue;
+V409 — условие и тело	true	while (999999999999999999999999) x = 1;
+V410 — условие и тело	true	while (999999999999999999999999) x += 1;
+V411 — условие и тело	true	while (999999999999999999999999) x -= 1;
+V412 — условие и тело	true	while (999999999999999999999999) x *= 2;
+V413 — условие и тело	true	while (999999999999999999999999) x /= 0;
+V414 — условие и тело	true	while (999999999999999999999999) x %= 2;
+V415 — условие и тело	true	while (999999999999999999999999) x + y * 2;
+V416 — условие и тело	true	while (999999999999999999999999) true;
+V417 — условие и тело	true	while (999999999999999999999999) 1;
+V418 — условие и тело	true	while (999999999999999999999999) { break; continue; }
+V419 — условие и тело	true	while (999999999999999999999999) while (y) break;
+V420 — условие и тело	true	while (999999999999999999999999) { while (y) { y--; } x++; }
+V421 — условие и тело	true	while (счетчик < 10) {}
+V422 — условие и тело	true	while (счетчик < 10) { x++; }
+V423 — условие и тело	true	while (счетчик < 10) x++;
+V424 — условие и тело	true	while (счетчик < 10) ++x;
+V425 — условие и тело	true	while (счетчик < 10) --x;
+V426 — условие и тело	true	while (счетчик < 10) x--;
+V427 — условие и тело	true	while (счетчик < 10) break;
+V428 — условие и тело	true	while (счетчик < 10) continue;
+V429 — условие и тело	true	while (счетчик < 10) x = 1;
+V430 — условие и тело	true	while (счетчик < 10) x += 1;
+V431 — условие и тело	true	while (счетчик < 10) x -= 1;
+V432 — условие и тело	true	while (счетчик < 10) x *= 2;
+V433 — условие и тело	true	while (счетчик < 10) x /= 0;
+V434 — условие и тело	true	while (счетчик < 10) x %= 2;
+V435 — условие и тело	true	while (счетчик < 10) x + y * 2;
+V436 — условие и тело	true	while (счетчик < 10) true;
+V437 — условие и тело	true	while (счетчик < 10) 1;
+V438 — условие и тело	true	while (счетчик < 10) { break; continue; }
+V439 — условие и тело	true	while (счетчик < 10) while (y) break;
+V440 — условие и тело	true	while (счетчик < 10) { while (y) { y--; } x++; }
+V441 — условие и тело	true	while (_готов) {}
+V442 — условие и тело	true	while (_готов) { x++; }
+V443 — условие и тело	true	while (_готов) x++;
+V444 — условие и тело	true	while (_готов) ++x;
+V445 — условие и тело	true	while (_готов) --x;
+V446 — условие и тело	true	while (_готов) x--;
+V447 — условие и тело	true	while (_готов) break;
+V448 — условие и тело	true	while (_готов) continue;
+V449 — условие и тело	true	while (_готов) x = 1;
+V450 — условие и тело	true	while (_готов) x += 1;
+V451 — условие и тело	true	while (_готов) x -= 1;
+V452 — условие и тело	true	while (_готов) x *= 2;
+V453 — условие и тело	true	while (_готов) x /= 0;
+V454 — условие и тело	true	while (_готов) x %= 2;
+V455 — условие и тело	true	while (_готов) x + y * 2;
+V456 — условие и тело	true	while (_готов) true;
+V457 — условие и тело	true	while (_готов) 1;
+V458 — условие и тело	true	while (_готов) { break; continue; }
+V459 — условие и тело	true	while (_готов) while (y) break;
+V460 — условие и тело	true	while (_готов) { while (y) { y--; } x++; }
+V461 — сравнение ==	true	while (x == y) {}
+V462 — сравнение ==	true	while (x == 0) {}
+V463 — сравнение ==	true	while (x == false) {}
+V464 — сравнение ==	true	while (x == (y * 2)) {}
+V465 — сравнение ==	true	while (1 == y) {}
+V466 — сравнение ==	true	while (1 == 0) {}
+V467 — сравнение ==	true	while (1 == false) {}
+V468 — сравнение ==	true	while (1 == (y * 2)) {}
+V469 — сравнение ==	true	while (true == y) {}
+V470 — сравнение ==	true	while (true == 0) {}
+V471 — сравнение ==	true	while (true == false) {}
+V472 — сравнение ==	true	while (true == (y * 2)) {}
+V473 — сравнение ==	true	while ((x + 1) == y) {}
+V474 — сравнение ==	true	while ((x + 1) == 0) {}
+V475 — сравнение ==	true	while ((x + 1) == false) {}
+V476 — сравнение ==	true	while ((x + 1) == (y * 2)) {}
+V477 — сравнение !=	true	while (x != y) {}
+V478 — сравнение !=	true	while (x != 0) {}
+V479 — сравнение !=	true	while (x != false) {}
+V480 — сравнение !=	true	while (x != (y * 2)) {}
+V481 — сравнение !=	true	while (1 != y) {}
+V482 — сравнение !=	true	while (1 != 0) {}
+V483 — сравнение !=	true	while (1 != false) {}
+V484 — сравнение !=	true	while (1 != (y * 2)) {}
+V485 — сравнение !=	true	while (true != y) {}
+V486 — сравнение !=	true	while (true != 0) {}
+V487 — сравнение !=	true	while (true != false) {}
+V488 — сравнение !=	true	while (true != (y * 2)) {}
+V489 — сравнение !=	true	while ((x + 1) != y) {}
+V490 — сравнение !=	true	while ((x + 1) != 0) {}
+V491 — сравнение !=	true	while ((x + 1) != false) {}
+V492 — сравнение !=	true	while ((x + 1) != (y * 2)) {}
+V493 — сравнение <	true	while (x < y) {}
+V494 — сравнение <	true	while (x < 0) {}
+V495 — сравнение <	true	while (x < false) {}
+V496 — сравнение <	true	while (x < (y * 2)) {}
+V497 — сравнение <	true	while (1 < y) {}
+V498 — сравнение <	true	while (1 < 0) {}
+V499 — сравнение <	true	while (1 < false) {}
+V500 — сравнение <	true	while (1 < (y * 2)) {}
+V501 — сравнение <	true	while (true < y) {}
+V502 — сравнение <	true	while (true < 0) {}
+V503 — сравнение <	true	while (true < false) {}
+V504 — сравнение <	true	while (true < (y * 2)) {}
+V505 — сравнение <	true	while ((x + 1) < y) {}
+V506 — сравнение <	true	while ((x + 1) < 0) {}
+V507 — сравнение <	true	while ((x + 1) < false) {}
+V508 — сравнение <	true	while ((x + 1) < (y * 2)) {}
+V509 — сравнение >	true	while (x > y) {}
+V510 — сравнение >	true	while (x > 0) {}
+V511 — сравнение >	true	while (x > false) {}
+V512 — сравнение >	true	while (x > (y * 2)) {}
+V513 — сравнение >	true	while (1 > y) {}
+V514 — сравнение >	true	while (1 > 0) {}
+V515 — сравнение >	true	while (1 > false) {}
+V516 — сравнение >	true	while (1 > (y * 2)) {}
+V517 — сравнение >	true	while (true > y) {}
+V518 — сравнение >	true	while (true > 0) {}
+V519 — сравнение >	true	while (true > false) {}
+V520 — сравнение >	true	while (true > (y * 2)) {}
+V521 — сравнение >	true	while ((x + 1) > y) {}
+V522 — сравнение >	true	while ((x + 1) > 0) {}
+V523 — сравнение >	true	while ((x + 1) > false) {}
+V524 — сравнение >	true	while ((x + 1) > (y * 2)) {}
+V525 — сравнение <=	true	while (x <= y) {}
+V526 — сравнение <=	true	while (x <= 0) {}
+V527 — сравнение <=	true	while (x <= false) {}
+V528 — сравнение <=	true	while (x <= (y * 2)) {}
+V529 — сравнение <=	true	while (1 <= y) {}
+V530 — сравнение <=	true	while (1 <= 0) {}
+V531 — сравнение <=	true	while (1 <= false) {}
+V532 — сравнение <=	true	while (1 <= (y * 2)) {}
+V533 — сравнение <=	true	while (true <= y) {}
+V534 — сравнение <=	true	while (true <= 0) {}
+V535 — сравнение <=	true	while (true <= false) {}
+V536 — сравнение <=	true	while (true <= (y * 2)) {}
+V537 — сравнение <=	true	while ((x + 1) <= y) {}
+V538 — сравнение <=	true	while ((x + 1) <= 0) {}
+V539 — сравнение <=	true	while ((x + 1) <= false) {}
+V540 — сравнение <=	true	while ((x + 1) <= (y * 2)) {}
+V541 — сравнение >=	true	while (x >= y) {}
+V542 — сравнение >=	true	while (x >= 0) {}
+V543 — сравнение >=	true	while (x >= false) {}
+V544 — сравнение >=	true	while (x >= (y * 2)) {}
+V545 — сравнение >=	true	while (1 >= y) {}
+V546 — сравнение >=	true	while (1 >= 0) {}
+V547 — сравнение >=	true	while (1 >= false) {}
+V548 — сравнение >=	true	while (1 >= (y * 2)) {}
+V549 — сравнение >=	true	while (true >= y) {}
+V550 — сравнение >=	true	while (true >= 0) {}
+V551 — сравнение >=	true	while (true >= false) {}
+V552 — сравнение >=	true	while (true >= (y * 2)) {}
+V553 — сравнение >=	true	while ((x + 1) >= y) {}
+V554 — сравнение >=	true	while ((x + 1) >= 0) {}
+V555 — сравнение >=	true	while ((x + 1) >= false) {}
+V556 — сравнение >=	true	while ((x + 1) >= (y * 2)) {}
+I557 — неверное условие	false	while () { x++; }
+I558 — неверное условие	false	while (break) { x++; }
+I559 — неверное условие	false	while (continue) { x++; }
+I560 — неверное условие	false	while (while) { x++; }
+I561 — неверное условие	false	while (x = 1) { x++; }
+I562 — неверное условие	false	while (x += 1) { x++; }
+I563 — неверное условие	false	while (x++) { x++; }
+I564 — неверное условие	false	while (++x) { x++; }
+I565 — неверное условие	false	while (--x) { x++; }
+I566 — неверное условие	false	while (x--) { x++; }
+I567 — неверное условие	false	while (!!x) { x++; }
+I568 — неверное условие	false	while (-x) { x++; }
+I569 — неверное условие	false	while (+1) { x++; }
+I570 — неверное условие	false	while (!) { x++; }
+I571 — неверное условие	false	while (x <) { x++; }
+I572 — неверное условие	false	while (< x) { x++; }
+I573 — неверное условие	false	while (x &&) { x++; }
+I574 — неверное условие	false	while (&& x) { x++; }
+I575 — неверное условие	false	while (x ||) { x++; }
+I576 — неверное условие	false	while (|| x) { x++; }
+I577 — неверное условие	false	while (x < y < z) { x++; }
+I578 — неверное условие	false	while (x == y == z) { x++; }
+I579 — неверное условие	false	while (x + * y) { x++; }
+I580 — неверное условие	false	while (x y) { x++; }
+I581 — неверное условие	false	while (true false) { x++; }
+I582 — неверное условие	false	while (()) { x++; }
+I583 — неверное условие	false	while ((())) { x++; }
+I584 — неверное условие	false	while (x;) { x++; }
+I585 — неверное условие	false	while (break;) { x++; }
+I586 — неверное условие	false	while (continue;) { x++; }
+I587 — неверное условие	false	while (x && || y) { x++; }
+I588 — неверное условие	false	while (x * / y) { x++; }
+I589 — неверный оператор	false	while (x) { ; }
+I590 — неверный оператор	false	while (x) { x = ; }
+I591 — неверный оператор	false	while (x) { x += ; }
+I592 — неверный оператор	false	while (x) { x -= ; }
+I593 — неверный оператор	false	while (x) { x *= ; }
+I594 — неверный оператор	false	while (x) { x /= ; }
+I595 — неверный оператор	false	while (x) { x %= ; }
+I596 — неверный оператор	false	while (x) { x = y = 1; }
+I597 — неверный оператор	false	while (x) { x = true && false; }
+I598 — неверный оператор	false	while (x) { x = x < y; }
+I599 — неверный оператор	false	while (x) { x = -1; }
+I600 — неверный оператор	false	while (x) { x = +1; }
+I601 — неверный оператор	false	while (x) { x = !y; }
+I602 — неверный оператор	false	while (x) { x = ++y; }
+I603 — неверный оператор	false	while (x) { x = y++; }
+I604 — неверный оператор	false	while (x) { 1 = x; }
+I605 — неверный оператор	false	while (x) { true = 1; }
+I606 — неверный оператор	false	while (x) { false = 1; }
+I607 — неверный оператор	false	while (x) { break = 1; }
+I608 — неверный оператор	false	while (x) { continue = 1; }
+I609 — неверный оператор	false	while (x) { while = 1; }
+I610 — неверный оператор	false	while (x) { ++1; }
+I611 — неверный оператор	false	while (x) { --true; }
+I612 — неверный оператор	false	while (x) { x++++; }
+I613 — неверный оператор	false	while (x) { x++ + y; }
+I614 — неверный оператор	false	while (x) { ++x + y; }
+I615 — неверный оператор	false	while (x) { x ++ ++; }
+I616 — неверный оператор	false	while (x) { break x; }
+I617 — неверный оператор	false	while (x) { continue x; }
+I618 — неверный оператор	false	while (x) { break }
+I619 — неверный оператор	false	while (x) { continue }
+I620 — неверный оператор	false	while (x) { x++ }
+I621 — неверный оператор	false	while (x) { x = (y + ); }
+I622 — неверный оператор	false	while (x) { x = (); }
+I623 — неверный оператор	false	while (x) { { x++; } }
+I624 — неверный оператор	false	while (x) { if (x) x++; }
+I625 — неверный оператор	false	while (x) { return x; }
+I626 — неверный оператор	false	while (x) { for (x) x++; }
+I627 — неверный оператор	false	while (x) { int x; }
+I628 — структура программы	false	
+I629 — структура программы	false	 
+I630 — структура программы	false	while
+I631 — структура программы	false	while (
+I632 — структура программы	false	while ()
+I633 — структура программы	false	while (x)
+I634 — структура программы	false	while (x);
+I635 — структура программы	false	while x) {}
+I636 — структура программы	false	while (x {}
+I637 — структура программы	false	while ((x) {}
+I638 — структура программы	false	while (x)) {}
+I639 — структура программы	false	while (x) {
+I640 — структура программы	false	while (x) { x++;
+I641 — структура программы	false	while (x) {} }
+I642 — структура программы	false	while (x) {} x++;
+I643 — структура программы	false	while (x) {} while (y) {}
+I644 — структура программы	false	break;
+I645 — структура программы	false	continue;
+I646 — структура программы	false	{ while (x) {} }
+I647 — структура программы	false	While (x) {}
+I648 — структура программы	false	WHILE (x) {}
+I649 — структура программы	false	while (x) { while (y) }
+I650 — структура программы	false	while (x) { while () {} }
+V651 — пограничный пример	true	while(true){}
+V652 — пограничный пример	true	while(x){x+=1;break;continue;}
+V653 — пограничный пример	true	while (x) { x = (y < z); }
+V654 — пограничный пример	true	while (x) { x = (y && z); }
+V655 — пограничный пример	true	while (TRUE) {}
+V656 — пограничный пример	true	while (x) { Break = 1; Continue = 2; }
+V657 — пограничный пример	true	while (x) { переменная_1++; }

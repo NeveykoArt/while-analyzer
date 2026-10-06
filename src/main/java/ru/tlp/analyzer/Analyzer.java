@@ -1,40 +1,30 @@
 package ru.tlp.analyzer;
 
 import ru.tlp.lexer.Lexer;
-import ru.tlp.parser.Parser;
-import ru.tlp.parser.ParserException;
+import ru.tlp.parser.IronsParser;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Analyzer {
-
     public AnalysisResult analyze(String code) {
-        try {
-            Lexer lexer = new Lexer(code);
-            Parser parser = new Parser(lexer.tokenize());
+        List<Diagnostic> errors = new ArrayList<>();
+        var tokens = new Lexer(code).tokenize(errors::add);
 
-            parser.parse();
+        errors.addAll(new IronsParser(tokens).parse());
 
-            return new AnalysisResult(
-                    true,
-                    "Синтаксис корректен",
-                    -1,
-                    0
-            );
+        errors.sort(Comparator.comparingInt(Diagnostic::position));
 
-        } catch (ParserException exception) {
-            return new AnalysisResult(
-                    false,
-                    exception.getMessage(),
-                    exception.getPosition(),
-                    exception.getLength()
-            );
-
-        } catch (IllegalArgumentException exception) {
-            return new AnalysisResult(
-                    false,
-                    exception.getMessage(),
-                    -1,
-                    0
-            );
+        if (errors.isEmpty()) {
+            return new AnalysisResult(true, "Синтаксис корректен", -1, 0, List.of());
         }
+
+        Diagnostic first = errors.getFirst();
+        
+        return new AnalysisResult(false,
+                errors.stream().map(Diagnostic::message).collect(Collectors.joining("\n")),
+                first.position(), first.length(), errors);
     }
 }

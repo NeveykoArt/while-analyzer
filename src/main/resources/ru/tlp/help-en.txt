@@ -1,0 +1,53 @@
+USER GUIDE
+
+While Analyzer checks the syntax of while statements within the supported C++ subset. A document must contain one outer loop; nested loops are permitted. Select Run → Analyze to start a syntax check.
+
+Workspace
+
+The editor provides access to the source text, with line numbers displayed on the left. The Analysis result pane displays a confirmation of valid syntax or a list of errors with line and column references. Drag the divider to adjust the height of each pane.
+
+Invalid fragments are highlighted in red. Markers indicate missing required elements. Editing the document clears the highlights; results are updated when analysis is run again.
+
+Toolbar
+
+The toolbar below the menu bar provides access to common commands. Hover over a button to display its command name.
+
+File menu
+
+New (＋) — clears the editor and analysis results and creates a new document.
+Open (📂) — loads a .txt or .cpp file into the editor. Analysis must be started separately.
+Save (💾) — writes the editor contents to the current file. For a new document, a dialog allows you to specify the filename and location.
+Exit — closes the application.
+
+Creating or opening a document and exiting the application do not display a prompt to save changes. Use Save to retain the current document.
+
+Edit menu
+
+Undo (↶) — reverses the most recent text change.
+Redo (↷) — restores an undone change.
+Cut (✂) — moves the selected text to the clipboard.
+Copy (⧉) — copies the selected text to the clipboard.
+Paste (▣) — inserts clipboard contents at the cursor or replaces the selected text.
+
+Text command
+
+Opens the coursework PDF report in the system PDF viewer. The report.pdf file is located in the application directory. A temporary document is provided until the final report is available. An error message is displayed if the file cannot be found.
+
+Run menu
+
+Analyze (▶) — checks the current editor contents and updates the error list and highlights. This command does not execute the source code or save the document.
+
+Help menu
+
+Show help (?, F1) — opens the user guide. Guide text can be selected and copied. Press Esc to close the window.
+About (i) — displays the application name and purpose.
+
+Language menu
+
+Русская / English — selects the language of the interface, help and analysis results. Changes take effect immediately and preserve the editor contents.
+
+View menu
+
+Text size → Increase font size / Decrease font size — adjusts the text size in the editor, line numbers and analysis results in 1-pixel increments. The editor font size ranges from 8 to 40 pixels.
+
+Ctrl + mouse wheel (Command + mouse wheel on macOS) — adjusts the main interface scale from 70% to 180%.

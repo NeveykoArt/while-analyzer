@@ -2,6 +2,8 @@ package ru.tlp.lexer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
+import ru.tlp.analyzer.Diagnostic;
 
 public class Lexer {
     private final String input;
@@ -12,6 +14,10 @@ public class Lexer {
     }
 
     public List<Token> tokenize() {
+        return tokenize(null);
+    }
+
+    public List<Token> tokenize(Consumer<Diagnostic> errors) {
         List<Token> tokens = new ArrayList<>();
 
         while (position < input.length()) {
@@ -119,7 +125,7 @@ public class Lexer {
                     if (nextIs('&')) {
                         addToken(tokens, TokenType.AND, "&&", 2);
                     } else {
-                        throw unexpectedCharacter(current);
+                        reportUnexpectedCharacter(current, errors);
                     }
                 }
 
@@ -127,11 +133,11 @@ public class Lexer {
                     if (nextIs('|')) {
                         addToken(tokens, TokenType.OR, "||", 2);
                     } else {
-                        throw unexpectedCharacter(current);
+                        reportUnexpectedCharacter(current, errors);
                     }
                 }
 
-                default -> throw unexpectedCharacter(current);
+                default -> reportUnexpectedCharacter(current, errors);
             }
         }
 
@@ -197,9 +203,15 @@ public class Lexer {
     }
 
     private IllegalArgumentException unexpectedCharacter(char character) {
-        return new IllegalArgumentException(
-                "Неожиданный символ '" + character
-                        + "' в позиции " + position
-        );
+        return new IllegalArgumentException("Неожиданный символ '" + character + "' в позиции " + position);
+    }
+
+    private void reportUnexpectedCharacter(char character, Consumer<Diagnostic> errors) {
+        IllegalArgumentException error = unexpectedCharacter(character);
+        if (errors == null) {
+            throw error;
+        }
+        errors.accept(new Diagnostic(error.getMessage(), position, 1));
+        position++;
     }
 }

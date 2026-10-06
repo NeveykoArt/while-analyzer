@@ -5,10 +5,10 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import ru.tlp.lexer.Lexer;
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
-class ParserTest {
+class IronsGrammarTest {
 
     @Test
     void parsesSimpleWhile() {
@@ -352,16 +352,16 @@ class ParserTest {
     }
 
     @Test
-    void rejectsBreakAsDirectWhileBody() {
-        assertInvalid("""
+    void parsesBreakAsDirectWhileBody() {
+        assertValid("""
                 while (x < 10)
                     break;
                 """);
     }
 
     @Test
-    void rejectsContinueAsDirectWhileBody() {
-        assertInvalid("""
+    void parsesContinueAsDirectWhileBody() {
+        assertValid("""
                 while (x < 10)
                     continue;
                 """);
@@ -399,20 +399,16 @@ class ParserTest {
     }
 
     private void assertValid(String code) {
-        Parser parser = createParser(code);
-
-        assertDoesNotThrow(parser::parse);
+        assertTrue(createParser(code).parse().isEmpty(), code);
     }
 
     private void assertInvalid(String code) {
-        Parser parser = createParser(code);
-
-        assertThrows(ParserException.class, parser::parse);
+        assertFalse(createParser(code).parse().isEmpty(), code);
     }
 
-    private Parser createParser(String code) {
+    private IronsParser createParser(String code) {
         Lexer lexer = new Lexer(code);
 
-        return new Parser(lexer.tokenize());
+        return new IronsParser(lexer.tokenize());
     }
 }
