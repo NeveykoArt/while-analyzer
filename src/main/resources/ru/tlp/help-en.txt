@@ -46,8 +46,8 @@ Language menu
 
 Русская / English — selects the language of the interface, help and analysis results. Changes take effect immediately and preserve the editor contents.
 
-View menu
+Text size and interface scale
 
-Text size → Increase font size / Decrease font size — adjusts the text size in the editor, line numbers and analysis results in 1-pixel increments. The editor font size ranges from 8 to 40 pixels.
+The Decrease font size (−) and Increase font size (+) buttons appear as icons at the end of the toolbar. Each click decreases or increases the font size in the editor and line numbers by 2 pixels, within a range of 8 to 40 pixels. The analysis result font size stays unchanged. Hover over either button to see its command name.
 
 Ctrl + mouse wheel (Command + mouse wheel on macOS) — adjusts the main interface scale from 70% to 180%.

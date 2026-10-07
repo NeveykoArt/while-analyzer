@@ -78,9 +78,6 @@ public final class IronsParser {
     private List<Symbol> choose(Rule rule) {
         TokenType current = peek().getType();
         List<List<Symbol>> alternatives = GRAMMAR.productions.get(rule);
-        // Keep an unstarted loop on the residual stack. Expanding it on arbitrary
-        // input makes condition operands admissible before 'while (' was seen.
-        // '(' is retained as evidence of a header with a missing 'while'.
         if (rule == Loop && current != WHILE && current != LEFT_PAREN) {
             return null;
         }

@@ -100,7 +100,7 @@ final class Localization {
             }
             output.append("\n").append(++number).append(". ")
                     .append(english ? "Line " : "Строка ").append(line)
-                    .append(english ? ", column " : ", столбец ").append(column)
+                    .append(english ? ", column " : ", символ ").append(column)
                     .append(": ").append(diagnostic(error.message(), english));
         }
         return output.toString();

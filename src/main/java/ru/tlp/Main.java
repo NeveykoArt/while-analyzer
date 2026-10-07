@@ -49,7 +49,7 @@ public class Main extends Application {
     private int textFontSize = 15;
     private double uiScale = 1.0;
 
-    private record Command(String title, String icon, Runnable action) {}
+    private record Command(String title, String iconFile, Runnable action) {}
 
     @Override
     public void start(Stage stage) {
@@ -79,19 +79,20 @@ public class Main extends Application {
     }
 
     private VBox createTop() {
-        Command create = new Command("Создать", "＋", this::newFile);
-        Command open = new Command("Открыть", "📂", this::openFile);
-        Command save = new Command("Сохранить", "💾", this::saveFile);
-        Command undo = new Command("Отменить", "↶", () -> codeArea.undo());
-        Command redo = new Command("Повторить", "↷", () -> codeArea.redo());
-        Command cut = new Command("Вырезать", "✂", () -> codeArea.cut());
-        Command copy = new Command("Копировать", "⧉", () -> codeArea.copy());
-        Command paste = new Command("Вставить", "▣", () -> codeArea.paste());
-        Command analyze = new Command("Анализ", "▶", this::analyze);
-        Command help = new Command("Вызов справки", "?", this::showHelp);
-        Command about = new Command("О программе", "i", this::showAbout);
+        Command create = new Command("Создать", "create.png", this::newFile);
+        Command open = new Command("Открыть", "open.png", this::openFile);
+        Command save = new Command("Сохранить", "save.png", this::saveFile);
+        Command undo = new Command("Отменить", "undo.png", () -> codeArea.undo());
+        Command redo = new Command("Повторить", "redo.png", () -> codeArea.redo());
+        Command cut = new Command("Вырезать", "cut.png", () -> codeArea.cut());
+        Command copy = new Command("Копировать", "copy.png", () -> codeArea.copy());
+        Command paste = new Command("Вставить", "paste.png", () -> codeArea.paste());
+        Command analyze = new Command("Анализ", "analyze.png", this::analyze);
+        Command help = new Command("Вызов справки", "help.png", this::showHelp);
+        Command about = new Command("О программе", "about.png", this::showAbout);
 
         Button report = new Button();
+        report.setFocusTraversable(false);
         localize(report.textProperty(), "Текст");
         report.setStyle("-fx-background-color: transparent; -fx-padding: 0;");
         report.setOnAction(event -> openReport());
@@ -107,16 +108,15 @@ public class Main extends Application {
                 menu("Пуск", item(analyze)),
                 menu("Справка", item(help), new SeparatorMenuItem(), item(about)),
                 menu("Локализация", languageItem("Русская", false, languages),
-                        languageItem("English", true, languages)),
-                menu("Вид", menu("Размер текста",
-                        item("Увеличить шрифт", () -> changeFontSize(1)),
-                        item("Уменьшить шрифт", () -> changeFontSize(-1))))
+                        languageItem("English", true, languages))
         );
         ToolBar toolbar = new ToolBar(
                 button(create), button(open), button(save), new Separator(),
                 button(undo), button(redo), new Separator(),
                 button(cut), button(copy), button(paste), new Separator(),
-                button(analyze, "Пуск"), button(help, "Справка"), button(about));
+                button(analyze, "Пуск"), button(help, "Справка"), button(about), new Separator(),
+                fontSizeButton("font-decrease.png", "Уменьшить шрифт", -2),
+                fontSizeButton("font-increase.png", "Увеличить шрифт", 2));
         return new VBox(menuBar, toolbar);
     }
 
@@ -151,8 +151,22 @@ public class Main extends Application {
     }
 
     private Button button(Command command, String tooltipTitle) {
-        Button button = new Button(command.icon());
-        button.setOnAction(event -> command.action().run());
+        Button button = toolbarButton(command.title(), tooltipTitle, command.action());
+        button.setGraphic(CommandIcons.createView(command.iconFile()));
+        return button;
+    }
+
+    private Button fontSizeButton(String iconFile, String title, int delta) {
+        return button(new Command(title, iconFile, () -> changeFontSize(delta)));
+    }
+
+    private Button toolbarButton(String title, String tooltipTitle, Runnable action) {
+        Button button = new Button();
+        // Keep clicks from taking keyboard focus and leaving the focus highlight visible.
+        button.setFocusTraversable(false);
+        button.accessibleTextProperty().bind(Bindings.createStringBinding(
+                () -> text(title), english));
+        button.setOnAction(event -> action.run());
         button.setPrefSize(42, 34);
         Tooltip tooltip = new Tooltip();
         localize(tooltip.textProperty(), tooltipTitle);
@@ -211,6 +225,7 @@ public class Main extends Application {
         outputArea = new TextArea();
         outputArea.setEditable(false);
         outputArea.setWrapText(true);
+        outputArea.setStyle(fontStyle(14));
         Label outputLabel = new Label();
         localize(outputLabel.textProperty(), "Результат анализа");
         outputLabel.setPadding(new Insets(6));
@@ -302,7 +317,6 @@ public class Main extends Application {
         String editorFont = fontStyle(textFontSize);
         codeArea.setStyle(editorFont + "-fx-highlight-fill: #e74c3c; -fx-highlight-text-fill: white;");
         lineNumbers.setStyle(editorFont + "-fx-control-inner-background: #f3f3f3;");
-        outputArea.setStyle(fontStyle(Math.max(MIN_TEXT_FONT_SIZE, textFontSize - 1)));
         double gutterWidth = Math.max(55, textFontSize * 3.7);
         lineNumbers.setPrefWidth(gutterWidth);
         lineNumbers.setMaxWidth(gutterWidth);
